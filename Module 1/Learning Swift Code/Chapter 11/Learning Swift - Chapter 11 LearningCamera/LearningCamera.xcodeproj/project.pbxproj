@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4930749A1C7AD0070069CA9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493074991C7AD0070069CA9D /* AppDelegate.swift */; };
+		4930749C1C7AD0070069CA9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930749B1C7AD0070069CA9D /* ViewController.swift */; };
+		4930749F1C7AD0070069CA9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4930749D1C7AD0070069CA9D /* Main.storyboard */; };
+		493074A11C7AD0070069CA9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493074A01C7AD0070069CA9D /* Assets.xcassets */; };
+		493074A41C7AD0070069CA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493074A21C7AD0070069CA9D /* LaunchScreen.storyboard */; };
+		496074211C84188D0022E18F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496074201C84188D0022E18F /* Photo.swift */; };
+		496074231C841AB00022E18F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496074221C841AB00022E18F /* PhotoCollectionViewCell.swift */; };
+		496074251C84299A0022E18F /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496074241C84299A0022E18F /* PhotoStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		493074961C7AD0070069CA9D /* LearningCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		493074991C7AD0070069CA9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4930749B1C7AD0070069CA9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4930749E1C7AD0070069CA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		493074A01C7AD0070069CA9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		493074A31C7AD0070069CA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		493074A51C7AD0070069CA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496074201C84188D0022E18F /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		496074221C841AB00022E18F /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		496074241C84299A0022E18F /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		493074931C7AD0070069CA9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4930748D1C7AD0070069CA9D = {
+			isa = PBXGroup;
+			children = (
+				493074981C7AD0070069CA9D /* LearningCamera */,
+				493074971C7AD0070069CA9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		493074971C7AD0070069CA9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				493074961C7AD0070069CA9D /* LearningCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		493074981C7AD0070069CA9D /* LearningCamera */ = {
+			isa = PBXGroup;
+			children = (
+				4960741E1C8418710022E18F /* Model */,
+				4960741F1C8418750022E18F /* View */,
+				4960741D1C8418680022E18F /* Controller */,
+				493074991C7AD0070069CA9D /* AppDelegate.swift */,
+				4930749D1C7AD0070069CA9D /* Main.storyboard */,
+				493074A01C7AD0070069CA9D /* Assets.xcassets */,
+				493074A21C7AD0070069CA9D /* LaunchScreen.storyboard */,
+				493074A51C7AD0070069CA9D /* Info.plist */,
+			);
+			path = LearningCamera;
+			sourceTree = "<group>";
+		};
+		4960741D1C8418680022E18F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4930749B1C7AD0070069CA9D /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4960741E1C8418710022E18F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				496074201C84188D0022E18F /* Photo.swift */,
+				496074241C84299A0022E18F /* PhotoStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4960741F1C8418750022E18F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				496074221C841AB00022E18F /* PhotoCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		493074951C7AD0070069CA9D /* LearningCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493074A81C7AD0070069CA9D /* Build configuration list for PBXNativeTarget "LearningCamera" */;
+			buildPhases = (
+				493074921C7AD0070069CA9D /* Sources */,
+				493074931C7AD0070069CA9D /* Frameworks */,
+				493074941C7AD0070069CA9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearningCamera;
+			productName = LearningCamera;
+			productReference = 493074961C7AD0070069CA9D /* LearningCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4930748E1C7AD0070069CA9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Learning Swift";
+				TargetAttributes = {
+					493074951C7AD0070069CA9D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 493074911C7AD0070069CA9D /* Build configuration list for PBXProject "LearningCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4930748D1C7AD0070069CA9D;
+			productRefGroup = 493074971C7AD0070069CA9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				493074951C7AD0070069CA9D /* LearningCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		493074941C7AD0070069CA9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493074A41C7AD0070069CA9D /* LaunchScreen.storyboard in Resources */,
+				493074A11C7AD0070069CA9D /* Assets.xcassets in Resources */,
+				4930749F1C7AD0070069CA9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		493074921C7AD0070069CA9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496074251C84299A0022E18F /* PhotoStore.swift in Sources */,
+				496074211C84188D0022E18F /* Photo.swift in Sources */,
+				496074231C841AB00022E18F /* PhotoCollectionViewCell.swift in Sources */,
+				4930749C1C7AD0070069CA9D /* ViewController.swift in Sources */,
+				4930749A1C7AD0070069CA9D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4930749D1C7AD0070069CA9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4930749E1C7AD0070069CA9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		493074A21C7AD0070069CA9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				493074A31C7AD0070069CA9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		493074A61C7AD0070069CA9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		493074A71C7AD0070069CA9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		493074A91C7AD0070069CA9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LearningCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.learningswift.LearningCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		493074AA1C7AD0070069CA9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LearningCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.learningswift.LearningCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		493074911C7AD0070069CA9D /* Build configuration list for PBXProject "LearningCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493074A61C7AD0070069CA9D /* Debug */,
+				493074A71C7AD0070069CA9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		493074A81C7AD0070069CA9D /* Build configuration list for PBXNativeTarget "LearningCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493074A91C7AD0070069CA9D /* Debug */,
+				493074AA1C7AD0070069CA9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4930748E1C7AD0070069CA9D /* Project object */;
+}
