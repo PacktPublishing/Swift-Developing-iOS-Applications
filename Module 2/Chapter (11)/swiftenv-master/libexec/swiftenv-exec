@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -e
+
+SHIM=""
+if [ "$1" = "--shim" ]; then
+  SHIM="--shim"
+  shift 1
+fi
+
+COMMAND=$1
+
+if [ -z "$COMMAND" ] ; then
+  echo "Usage: swiftenv exec <command>"
+  exit 1
+fi
+
+COMMAND_PATH="$(swiftenv-which $SHIM $COMMAND)"
+COMMAND_BIN_PATH="${COMMAND_PATH%/*}"
+
+shift 1
+
+VERSION=$(swiftenv-version-name)
+if [ "$VERSION" != "system" ]; then
+  export PATH="$COMMAND_BIN_PATH:$PATH"
+fi
+exec -a "$COMMAND" "$COMMAND_PATH" "$@"

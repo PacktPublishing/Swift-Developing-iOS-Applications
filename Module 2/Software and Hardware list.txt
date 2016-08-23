@@ -1,0 +1,5 @@
+You will need Following S/W and H/W
+
+1) Mac system running latest os 
+2) Mac system with minimum 4 GB RAM
+3) Xcode 7.1 or latest

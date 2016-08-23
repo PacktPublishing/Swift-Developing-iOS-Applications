@@ -1,0 +1,177 @@
+#!/usr/bin/env bash
+# completes
+
+set -e
+
+unsupported_binary_platform() {
+  echo "Apple does not provide binary releases for $1."
+  echo
+  echo "You may manually install Swift and place it into:"
+  echo "  $SWIFTENV_ROOT/versions/$VERSION"
+  echo
+  echo "Alternatively, you can force using a Ubuntu binaries by using the following:"
+  echo "  $ env UBUNTU_VERSION=ubuntu15.10 swiftenv install $VERSION"
+  echo
+  exit 1
+}
+
+check_url() {
+  status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$1")
+  if [ "$status_code" = "404" ]; then
+    echo "$VERSION was not found on swift.org."
+    echo "  $1"
+    exit 1
+  elif [ "$status_code" != "200" ]; then
+    echo "There was a network problem retreiving $VERSION, server returned $status_code."
+    echo "  $1"
+    exit 1
+  fi
+}
+
+install_linux_binary() {
+  VERSION="$1"
+  URL="$2"
+
+  if [ -z "$URL" ]; then
+    if [ -z "$UBUNTU_VERSION" ]; then
+      if command -v "lsb_release" >/dev/null 2>&1; then
+        if [ $(lsb_release -is) = "Ubuntu" ]; then
+          UBUNTU_VERSION="ubuntu$(lsb_release -rs)"
+          if [ "$UBUNTU_VERSION" != "ubuntu15.10" ] && [ "$UBUNTU_VERSION" != "ubuntu14.04" ]; then
+            unsupported_binary_platform $UBUNTU_VERSION
+          fi
+        else
+          unsupported_binary_platform "$(lsb_release -ds)"
+        fi
+      else
+        unsupported_binary_platform "your distribution"
+      fi
+    fi
+
+    URL="https://swift.org/builds/$RELEASE/${UBUNTU_VERSION//./}/swift-$VERSION/swift-$VERSION-$UBUNTU_VERSION.tar.gz"
+  fi
+
+  if [[ "$URL" != *".tar.gz" ]]; then
+    echo "$URL is not as a tar.gz as expected."
+    exit 1
+  fi
+
+  check_url "$URL"
+
+  mkdir -p "$TMPDIR/swiftenv-$VERSION"
+
+  echo "Downloading $URL"
+  curl "$URL" -s | tar xz -C "$TMPDIR/swiftenv-$VERSION"
+
+  DESTINATION="$SWIFTENV_ROOT/versions/$VERSION"
+  mv "$TMPDIR/swiftenv-$VERSION/swift-$VERSION"* "$DESTINATION"
+}
+
+# Installs an OS X binary from the supplied URL
+install_osx_binary() {
+  VERSION="$1"
+  URL="$2"
+
+  if [ -z "$URL" ]; then
+    URL="https://swift.org/builds/$RELEASE/xcode/swift-$VERSION/swift-$VERSION-osx.pkg"
+  fi
+
+  if [[ "$URL" != *"-osx.pkg" ]]; then
+    echo "$URL does not end in '-osx.pkg' as expected."
+    exit 1
+  fi
+
+  check_url "$URL"
+
+  echo "Downloading $URL"
+  curl -Lo "$TMPDIR/swiftenv-$VERSION.pkg" "$URL"
+
+  sudo installer -pkg "$TMPDIR/swiftenv-$VERSION.pkg" -target /
+}
+
+# Install a binary from the given URL
+install_binary_url() {
+  URL="$1"
+
+  case $(uname) in
+  'Linux' )
+    install_linux_binary "$VERSION" "$URL"
+    ;;
+  'Darwin' )
+    install_osx_binary "$VERSION" "$URL"
+    ;;
+  * )
+    echo "$(uname) is unsupported, please file an issue with swiftenv."
+    exit 1
+    ;;
+  esac
+}
+
+install_source() {
+  VERSION="$1"
+  swiftenv-build "$VERSION" "$SWIFTENV_ROOT/versions/$VERSION"
+}
+
+mkdir -p "$SWIFTENV_ROOT/versions"
+
+VERSION=$1
+if [ -z "$VERSION" ] ; then
+  VERSION="$(swiftenv-version-name --dont-check)"
+
+  if [ "$VERSION" == "system" ]; then
+    echo "Usage: swiftenv install <version>"
+    exit 1
+  fi
+fi
+
+if [ "$VERSION" == "--list" ] || [ "$VERSION" == "--complete" ]; then
+  swiftenv-build --definitions
+  exit
+fi
+
+if [ -z "$TMPDIR" ] ; then
+  export TMPDIR=/tmp
+fi
+
+if [[ "$VERSION" == "https://"* ]]; then
+  URL="$VERSION"
+  VERSION="${URL##*/}"
+  VERSION="${VERSION%-*}"
+fi
+VERSION="${VERSION##swift-}"
+
+PREFIX="$(swiftenv-prefix "$VERSION" || true)"
+if [ -d "$PREFIX" ]; then
+  echo "$VERSION is already installed."
+  exit 1
+fi
+
+if [[ "$VERSION" == "DEVELOPMENT"* ]]; then
+  RELEASE="development"
+else
+  RELEASE="swift-${VERSION%%-*}-branch"
+fi
+
+if [ -z "$URL" ] && [ -r "$SWIFTENV_SOURCE_PATH/share/swiftenv-build/$VERSION" ]; then
+  install_source "$VERSION"
+  swiftenv-rehash
+  swiftenv-global "${VERSION##swift-}"
+  exit 0
+fi
+
+case $(uname) in
+'Linux' )
+  install_linux_binary "$VERSION" "$URL"
+  ;;
+'Darwin' )
+  install_osx_binary "$VERSION" "$URL"
+  ;;
+* )
+  echo "There are no binary releases of Swift for $(uname). Please manually install Swift into $SWIFTENV_ROOT/versions/$VERSION"
+  exit 1
+  ;;
+esac
+
+echo "$VERSION has been installed."
+swiftenv-rehash
+swiftenv-global "$VERSION"
