@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		347586DA1ABCEBB400468008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347586D91ABCEBB400468008 /* AppDelegate.swift */; };
+		347586DC1ABCEBB400468008 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347586DB1ABCEBB400468008 /* ViewController.swift */; };
+		347586DF1ABCEBB400468008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347586DD1ABCEBB400468008 /* Main.storyboard */; };
+		347586E11ABCEBB400468008 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347586E01ABCEBB400468008 /* Images.xcassets */; };
+		347586E41ABCEBB400468008 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347586E21ABCEBB400468008 /* LaunchScreen.xib */; };
+		347586F01ABCEBB400468008 /* RSNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347586EF1ABCEBB400468008 /* RSNetworkingTests.swift */; };
+		34799B6F1B6179CC00787373 /* RSTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34799B691B6179CC00787373 /* RSTransaction.swift */; };
+		34799B701B6179CC00787373 /* RSTransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34799B6A1B6179CC00787373 /* RSTransactionRequest.swift */; };
+		34799B711B6179CC00787373 /* RSURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34799B6B1B6179CC00787373 /* RSURLRequest.swift */; };
+		34799B721B6179CC00787373 /* RSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34799B6C1B6179CC00787373 /* RSUtilities.swift */; };
+		34799B731B6179CC00787373 /* UIButton+RSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34799B6D1B6179CC00787373 /* UIButton+RSNetworking.swift */; };
+		34799B741B6179CC00787373 /* UIImageView+RSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34799B6E1B6179CC00787373 /* UIImageView+RSNetworking.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		347586EA1ABCEBB400468008 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 347586CC1ABCEBB400468008 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 347586D31ABCEBB400468008;
+			remoteInfo = RSNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		347586D41ABCEBB400468008 /* RSNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		347586D81ABCEBB400468008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347586D91ABCEBB400468008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		347586DB1ABCEBB400468008 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		347586DE1ABCEBB400468008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		347586E01ABCEBB400468008 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		347586E31ABCEBB400468008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		347586E91ABCEBB400468008 /* RSNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		347586EE1ABCEBB400468008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347586EF1ABCEBB400468008 /* RSNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNetworkingTests.swift; sourceTree = "<group>"; };
+		34799B691B6179CC00787373 /* RSTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSTransaction.swift; sourceTree = "<group>"; };
+		34799B6A1B6179CC00787373 /* RSTransactionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSTransactionRequest.swift; sourceTree = "<group>"; };
+		34799B6B1B6179CC00787373 /* RSURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSURLRequest.swift; sourceTree = "<group>"; };
+		34799B6C1B6179CC00787373 /* RSUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUtilities.swift; sourceTree = "<group>"; };
+		34799B6D1B6179CC00787373 /* UIButton+RSNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+RSNetworking.swift"; sourceTree = "<group>"; };
+		34799B6E1B6179CC00787373 /* UIImageView+RSNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+RSNetworking.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		347586D11ABCEBB400468008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347586E61ABCEBB400468008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		347586CB1ABCEBB400468008 = {
+			isa = PBXGroup;
+			children = (
+				347586D61ABCEBB400468008 /* RSNetworking */,
+				347586EC1ABCEBB400468008 /* RSNetworkingTests */,
+				347586D51ABCEBB400468008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		347586D51ABCEBB400468008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				347586D41ABCEBB400468008 /* RSNetworking.app */,
+				347586E91ABCEBB400468008 /* RSNetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		347586D61ABCEBB400468008 /* RSNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				347586F91ABCEBC100468008 /* RSNetworking */,
+				347586D91ABCEBB400468008 /* AppDelegate.swift */,
+				347586DB1ABCEBB400468008 /* ViewController.swift */,
+				347586DD1ABCEBB400468008 /* Main.storyboard */,
+				347586E01ABCEBB400468008 /* Images.xcassets */,
+				347586E21ABCEBB400468008 /* LaunchScreen.xib */,
+				347586D71ABCEBB400468008 /* Supporting Files */,
+			);
+			path = RSNetworking;
+			sourceTree = "<group>";
+		};
+		347586D71ABCEBB400468008 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				347586D81ABCEBB400468008 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		347586EC1ABCEBB400468008 /* RSNetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				347586EF1ABCEBB400468008 /* RSNetworkingTests.swift */,
+				347586ED1ABCEBB400468008 /* Supporting Files */,
+			);
+			path = RSNetworkingTests;
+			sourceTree = "<group>";
+		};
+		347586ED1ABCEBB400468008 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				347586EE1ABCEBB400468008 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		347586F91ABCEBC100468008 /* RSNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				34799B691B6179CC00787373 /* RSTransaction.swift */,
+				34799B6A1B6179CC00787373 /* RSTransactionRequest.swift */,
+				34799B6B1B6179CC00787373 /* RSURLRequest.swift */,
+				34799B6C1B6179CC00787373 /* RSUtilities.swift */,
+				34799B6D1B6179CC00787373 /* UIButton+RSNetworking.swift */,
+				34799B6E1B6179CC00787373 /* UIImageView+RSNetworking.swift */,
+			);
+			name = RSNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		347586D31ABCEBB400468008 /* RSNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347586F31ABCEBB400468008 /* Build configuration list for PBXNativeTarget "RSNetworking" */;
+			buildPhases = (
+				347586D01ABCEBB400468008 /* Sources */,
+				347586D11ABCEBB400468008 /* Frameworks */,
+				347586D21ABCEBB400468008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSNetworking;
+			productName = RSNetworking;
+			productReference = 347586D41ABCEBB400468008 /* RSNetworking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		347586E81ABCEBB400468008 /* RSNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347586F61ABCEBB400468008 /* Build configuration list for PBXNativeTarget "RSNetworkingTests" */;
+			buildPhases = (
+				347586E51ABCEBB400468008 /* Sources */,
+				347586E61ABCEBB400468008 /* Frameworks */,
+				347586E71ABCEBB400468008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				347586EB1ABCEBB400468008 /* PBXTargetDependency */,
+			);
+			name = RSNetworkingTests;
+			productName = RSNetworkingTests;
+			productReference = 347586E91ABCEBB400468008 /* RSNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		347586CC1ABCEBB400468008 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jon Hoffman";
+				TargetAttributes = {
+					347586D31ABCEBB400468008 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					347586E81ABCEBB400468008 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 347586D31ABCEBB400468008;
+					};
+				};
+			};
+			buildConfigurationList = 347586CF1ABCEBB400468008 /* Build configuration list for PBXProject "RSNetworking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 347586CB1ABCEBB400468008;
+			productRefGroup = 347586D51ABCEBB400468008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				347586D31ABCEBB400468008 /* RSNetworking */,
+				347586E81ABCEBB400468008 /* RSNetworkingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		347586D21ABCEBB400468008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347586DF1ABCEBB400468008 /* Main.storyboard in Resources */,
+				347586E41ABCEBB400468008 /* LaunchScreen.xib in Resources */,
+				347586E11ABCEBB400468008 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347586E71ABCEBB400468008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		347586D01ABCEBB400468008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34799B6F1B6179CC00787373 /* RSTransaction.swift in Sources */,
+				34799B701B6179CC00787373 /* RSTransactionRequest.swift in Sources */,
+				347586DC1ABCEBB400468008 /* ViewController.swift in Sources */,
+				347586DA1ABCEBB400468008 /* AppDelegate.swift in Sources */,
+				34799B711B6179CC00787373 /* RSURLRequest.swift in Sources */,
+				34799B741B6179CC00787373 /* UIImageView+RSNetworking.swift in Sources */,
+				34799B721B6179CC00787373 /* RSUtilities.swift in Sources */,
+				34799B731B6179CC00787373 /* UIButton+RSNetworking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347586E51ABCEBB400468008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347586F01ABCEBB400468008 /* RSNetworkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		347586EB1ABCEBB400468008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 347586D31ABCEBB400468008 /* RSNetworking */;
+			targetProxy = 347586EA1ABCEBB400468008 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		347586DD1ABCEBB400468008 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347586DE1ABCEBB400468008 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		347586E21ABCEBB400468008 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347586E31ABCEBB400468008 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		347586F11ABCEBB400468008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		347586F21ABCEBB400468008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		347586F41ABCEBB400468008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RSNetworking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hoffman.jon.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		347586F51ABCEBB400468008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RSNetworking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hoffman.jon.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		347586F71ABCEBB400468008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RSNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hoffman.jon.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSNetworking.app/RSNetworking";
+			};
+			name = Debug;
+		};
+		347586F81ABCEBB400468008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RSNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hoffman.jon.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSNetworking.app/RSNetworking";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		347586CF1ABCEBB400468008 /* Build configuration list for PBXProject "RSNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347586F11ABCEBB400468008 /* Debug */,
+				347586F21ABCEBB400468008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		347586F31ABCEBB400468008 /* Build configuration list for PBXNativeTarget "RSNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347586F41ABCEBB400468008 /* Debug */,
+				347586F51ABCEBB400468008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		347586F61ABCEBB400468008 /* Build configuration list for PBXNativeTarget "RSNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347586F71ABCEBB400468008 /* Debug */,
+				347586F81ABCEBB400468008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 347586CC1ABCEBB400468008 /* Project object */;
+}
