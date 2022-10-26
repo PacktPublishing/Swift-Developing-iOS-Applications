@@ -35,3 +35,7 @@ Chapter 1 does not contain any code file.
 
 ####Module 3
 Chapter 15 does not contain code file.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781787120242">https://packt.link/free-ebook/9781787120242 </a> </p>
